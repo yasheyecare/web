@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>YASH EYE CARE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     :root {
       --bg-color: #f8f9fa;
@@ -25,11 +26,7 @@
       --footer-bg: #0d0d0d;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -38,7 +35,6 @@
       transition: all 0.4s ease;
     }
 
-    /* Welcome Screen */
     #welcome-screen {
       position: fixed;
       width: 100%;
@@ -77,8 +73,19 @@
     }
 
     header img {
-      height: 150px;
+      height: 160px;
       margin-bottom: 15px;
+      animation: pulse 2.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); filter: drop-shadow(0 0 0px white); }
+      50% { transform: scale(1.05); filter: drop-shadow(0 0 10px white); }
+      100% { transform: scale(1); filter: drop-shadow(0 0 0px white); }
+    }
+
+    header h1 {
+      text-shadow: 0 0 8px white;
     }
 
     nav {
@@ -176,6 +183,26 @@
       font-size: 0.9rem;
     }
 
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 12px 16px;
+      background-color: var(--button-bg);
+      color: white;
+      font-size: 16px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    #back-to-top:hover {
+      background-color: var(--accent-color);
+    }
+
     @media (max-width: 768px) {
       main { flex-direction: column; }
       aside { width: 100%; text-align: center; }
@@ -190,6 +217,9 @@
     <h1>WELCOME TO YASH EYE CARE</h1>
   </div>
 
+  <!-- Back to Top Button -->
+  <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆</button>
+
   <!-- Header -->
   <header>
     <img src="yasheyecare.jpg" alt="Yash Eye Care Logo" />
@@ -197,6 +227,7 @@
     <p>Expert Eye Care by Rishabh Chaudhary</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
@@ -209,9 +240,7 @@
 
     <section id="about">
       <h2>About Us</h2>
-      <p>
-        Welcome to YASH EYE CARE! Led by <strong>Dr. Rishabh Chaudhary</strong>, our clinic offers:
-      </p>
+      <p>Welcome to YASH EYE CARE! Led by <strong>Dr. Rishabh Chaudhary</strong>, our clinic offers:</p>
       <ul>
         <li>Treatment for all types of eye diseases</li>
         <li>Protective and stylish sunglasses</li>
@@ -236,18 +265,3 @@
           <button type="submit">Send Message</button>
         </form>
       </section>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 YASH EYE CARE. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.getElementById('toggle-theme').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
-
-</body>
-</html>
