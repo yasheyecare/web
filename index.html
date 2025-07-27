@@ -15,7 +15,6 @@
       --button-bg: #2c3e50;
       --footer-bg: #eee;
     }
-
     body.dark-mode {
       --bg-color: #1c1c1c;
       --text-color: #f0f0f0;
@@ -25,16 +24,13 @@
       --button-bg: #333;
       --footer-bg: #0d0d0d;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       transition: all 0.4s ease;
     }
-
     #welcome-screen {
       position: fixed;
       width: 100%;
@@ -48,51 +44,40 @@
       animation: fadeOut 1s ease forwards;
       animation-delay: 4s;
     }
-
     #welcome-screen h1 {
       font-size: 2.8rem;
       color: white;
       animation: zoomIn 2s ease;
     }
-
     @keyframes zoomIn {
       0% { transform: scale(0.5); opacity: 0; }
       60% { transform: scale(1.1); opacity: 1; }
       100% { transform: scale(1); }
     }
-
     @keyframes fadeOut {
       to { opacity: 0; visibility: hidden; }
     }
-
     header {
       background-color: var(--header-bg);
       text-align: center;
       padding: 40px 20px;
       color: white;
     }
-
     header img {
       height: 160px;
       margin-bottom: 15px;
       animation: pulse 2.5s infinite;
     }
-
     @keyframes pulse {
       0% { transform: scale(1); filter: drop-shadow(0 0 0px white); }
       50% { transform: scale(1.05); filter: drop-shadow(0 0 10px white); }
       100% { transform: scale(1); filter: drop-shadow(0 0 0px white); }
     }
-
-    header h1 {
-      text-shadow: 0 0 8px white;
-    }
-
+    header h1 { text-shadow: 0 0 8px white; }
     nav {
       background-color: var(--nav-bg);
       text-align: center;
     }
-
     nav a {
       color: white;
       text-decoration: none;
@@ -100,22 +85,16 @@
       display: inline-block;
       font-weight: bold;
     }
-
-    nav a:hover {
-      background-color: var(--accent-color);
-    }
-
+    nav a:hover { background-color: var(--accent-color); }
     main {
       display: flex;
       flex-wrap: wrap;
     }
-
     aside {
       width: 220px;
       padding: 20px;
       background-color: var(--footer-bg);
     }
-
     #toggle-theme {
       padding: 10px;
       width: 100%;
@@ -126,24 +105,17 @@
       color: white;
       cursor: pointer;
     }
-
-    #toggle-theme:hover {
-      background-color: var(--accent-color);
-    }
-
+    #toggle-theme:hover { background-color: var(--accent-color); }
     section {
       flex: 1;
       padding: 40px 20px;
       max-width: 900px;
     }
-
     ul {
       margin: 15px 0;
       padding-left: 20px;
     }
-
     .contact-details p { margin: 10px 0; }
-
     .contact-form {
       background-color: white;
       padding: 25px;
@@ -151,7 +123,6 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       margin-top: 20px;
     }
-
     .contact-form input,
     .contact-form textarea {
       width: 100%;
@@ -161,7 +132,6 @@
       border-radius: 6px;
       font-size: 1rem;
     }
-
     .contact-form button {
       background-color: var(--button-bg);
       color: white;
@@ -171,18 +141,15 @@
       border-radius: 6px;
       cursor: pointer;
     }
-
     .contact-form button:hover {
       background-color: var(--accent-color);
     }
-
     footer {
       background-color: var(--footer-bg);
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
     }
-
     #back-to-top {
       position: fixed;
       bottom: 30px;
@@ -198,11 +165,9 @@
       z-index: 1000;
       transition: background-color 0.3s ease;
     }
-
     #back-to-top:hover {
       background-color: var(--accent-color);
     }
-
     @media (max-width: 768px) {
       main { flex-direction: column; }
       aside { width: 100%; text-align: center; }
@@ -212,22 +177,18 @@
 </head>
 <body>
 
-  <!-- Welcome Screen -->
   <div id="welcome-screen">
     <h1>WELCOME TO YASH EYE CARE</h1>
   </div>
 
-  <!-- Back to Top Button -->
   <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆</button>
 
-  <!-- Header -->
   <header>
     <img src="yasheyecare.jpg" alt="Yash Eye Care Logo" />
     <h1>YASH EYE CARE</h1>
     <p>Expert Eye Care by Rishabh Chaudhary</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
@@ -237,15 +198,25 @@
     <aside>
       <button id="toggle-theme">Toggle Dark Theme</button>
     </aside>
-
     <section id="about">
-      <h2>About Us</h2>
-      <p>Welcome to YASH EYE CARE! Led by <strong>Dr. Rishabh Chaudhary</strong>, our clinic offers:</p>
-      <ul>
-        <li>Treatment for all types of eye diseases</li>
-        <li>Protective and stylish sunglasses</li>
-        <li>Prescription glasses tailored to your eyesight</li>
-      </ul>
+  <h2>About Us</h2>
+  <p>YASH EYE CARE is a trusted destination for modern and compassionate eye treatment. Led by <strong>Dr. Rishabh Chaudhary</strong>, our clinic combines cutting-edge technology with patient-first care to ensure clear vision and healthier eyes.</p>
+
+  <ul>
+    <li>👨‍⚕️ Experienced in treating various eye conditions like cataracts, glaucoma, dry eye syndrome, and refractive errors</li>
+    <li>🔬 Equipped with advanced diagnostic tools for accurate and early detection</li>
+    <li>🕶️ Large collection of protective, polarized, and stylish sunglasses for all age groups</li>
+    <li>👓 Precision-crafted prescription glasses tailored to your unique visual needs</li>
+    <li>🧑‍⚕️ Personalized consultation with Dr. Chaudhary to help every patient make informed choices</li>
+    <li>🏥 Safe and hygienic environment with a focus on comfort and trust</li>
+    <li>💼 Eye check-up camps and outreach programs for schools, businesses, and senior citizens</li>
+    <li>🌐 Digital prescription management and appointment support via WhatsApp</li>
+    <li>⚕️ Advice on eye care habits, screen time protection, and lifestyle-based vision preservation</li>
+    <li>🤝 Friendly staff and fast service ensure you feel taken care of from entry to exit</li>
+  </ul>
+
+  <p>We believe that healthy eyes create a brighter future. Whether you need expert treatment, new glasses, or just a routine check-up, YASH EYE CARE is committed to providing reliable, affordable, and professional care to our community.</p>
+</section>
 
       <section id="contact">
         <h2>Contact Us</h2>
@@ -265,3 +236,25 @@
           <button type="submit">Send Message</button>
         </form>
       </section>
+       </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 YASH EYE CARE. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle dark mode
+    document.getElementById('toggle-theme').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Show/Hide back to top button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+  </script>
+
+</body>
+</html>
